@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme: light-only, cream + teal, per the assignment brief. -->
+    <style name="Base.Theme.Skillforge" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/teal</item>
+        <item name="colorOnPrimary">@color/teal_on_primary</item>
+        <item name="colorPrimaryContainer">@color/teal_surface</item>
+        <item name="colorOnPrimaryContainer">@color/teal</item>
+        <item name="colorSecondary">@color/teal_light</item>
+        <item name="colorSecondaryContainer">@color/teal_surface</item>
+
+        <item name="android:colorBackground">@color/cream</item>
+        <item name="colorSurface">@color/cream_elevated</item>
+        <item name="colorOnBackground">@color/ink_primary</item>
+        <item name="colorOnSurface">@color/ink_primary</item>
+        <item name="colorSurfaceVariant">@color/teal_surface</item>
+        <item name="colorOnSurfaceVariant">@color/ink_secondary</item>
+        <item name="colorOutline">@color/cream_border</item>
+        <item name="colorError">@color/error_red</item>
+
+        <item name="android:fontFamily">@font/plus_jakarta_sans</item>
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+
+        <item name="android:statusBarColor">@color/cream</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/cream</item>
+    </style>
+
+    <style name="Theme.Skillforge" parent="Base.Theme.Skillforge" />
+</resources>

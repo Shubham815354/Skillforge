@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cream">
+
+        <ScrollView
+            android:id="@+id/contentScroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp">
+
+                    <ImageView
+                        android:id="@+id/lessonHero"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        tools:src="@color/teal_surface" />
+
+                    <View
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:layout_gravity="top|end"
+                        android:layout_marginTop="-40dp"
+                        android:layout_marginEnd="-40dp"
+                        android:background="@drawable/bg_hero_glow" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_hero_scrim" />
+
+                    <FrameLayout
+                        android:id="@+id/playPauseButton"
+                        android:layout_width="76dp"
+                        android:layout_height="76dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_circle_white"
+                        android:clickable="true"
+                        android:contentDescription="@string/content_desc_play"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:id="@+id/playPauseIcon"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_play_dark" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/heroTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|start"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginBottom="60dp"
+                        android:background="@drawable/bg_hero_tag_solid"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:textAppearance="@style/TextAppearance.Skillforge.Label"
+                        android:textColor="@color/teal"
+                        tools:text="// kotlin" />
+
+                    <TextView
+                        android:id="@+id/heroGhostTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|start"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginBottom="30dp"
+                        android:alpha="0.3"
+                        android:textAppearance="@style/TextAppearance.Skillforge.Headline"
+                        android:textColor="@android:color/white"
+                        tools:text="Kotlin Fundamentals" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <SeekBar
+                            android:id="@+id/playerSeekBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="-8dp"
+                            android:max="100"
+                            android:progress="0"
+                            android:progressBackgroundTint="#40FFFFFF"
+                            android:progressTint="@color/teal_light"
+                            android:thumbTint="@android:color/white" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/elapsedTimeText"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textAppearance="@style/TextAppearance.Skillforge.Label"
+                                android:textColor="@android:color/white"
+                                tools:text="02:14" />
+
+                            <TextView
+                                android:id="@+id/totalTimeText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="@style/TextAppearance.Skillforge.Label"
+                                android:textColor="@android:color/white"
+                                tools:text="06:00" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/lessonNumberLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/TextAppearance.Skillforge.Label"
+                        android:textColor="@color/teal"
+                        tools:text="Lesson 1 · Kotlin Fundamentals" />
+
+                    <TextView
+                        android:id="@+id/lessonTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textAppearance="@style/TextAppearance.Skillforge.Headline"
+                        tools:text="Welcome &amp; Setup" />
+
+                    <TextView
+                        android:id="@+id/lessonContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textAppearance="@style/TextAppearance.Skillforge.BodySmall"
+                        android:textColor="@color/ink_secondary"
+                        tools:text="Set up Android Studio and run your first Kotlin file." />
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/lessonTabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:background="@android:color/transparent"
+                        app:tabGravity="start"
+                        app:tabIndicatorColor="@color/teal"
+                        app:tabMode="scrollable"
+                        app:tabPaddingStart="0dp"
+                        app:tabRippleColor="@android:color/transparent"
+                        app:tabSelectedTextColor="@color/ink_primary"
+                        app:tabTextAppearance="@style/TextAppearance.Skillforge.TitleSmall"
+                        app:tabTextColor="@color/ink_secondary" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/cream_border" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/lessonsRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:nestedScrollingEnabled="false"
+                        android:overScrollMode="never"
+                        tools:listitem="@layout/item_lesson_row" />
+
+                    <TextView
+                        android:id="@+id/notesEmptyText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:gravity="center"
+                        android:text="@string/no_notes_yet"
+                        android:textAppearance="@style/TextAppearance.Skillforge.BodySmall"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/resourcesEmptyText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:gravity="center"
+                        android:text="@string/no_resources_yet"
+                        android:textAppearance="@style/TextAppearance.Skillforge.BodySmall"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/errorGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingHorizontal="32dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_error_outline" />
+
+            <TextView
+                android:id="@+id/errorMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.Skillforge.BodySmall"
+                tools:text="Lesson not found." />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/retryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/retry" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/bg_circle_dark_translucent"
+            android:clickable="true"
+            android:contentDescription="@string/content_desc_back"
+            android:focusable="true"
+            android:padding="10dp"
+            android:src="@drawable/ic_arrow_back"
+            android:tint="@android:color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/fullscreenButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/bg_circle_dark_translucent"
+            android:clickable="true"
+            android:contentDescription="@string/content_desc_fullscreen"
+            android:focusable="true"
+            android:padding="10dp"
+            android:src="@drawable/ic_fullscreen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

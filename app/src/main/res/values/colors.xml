@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Cream backgrounds -->
+    <color name="cream">#FFFBF5EA</color>
+    <color name="cream_elevated">#FFFFFFFF</color>
+    <color name="cream_border">#FFE9E0CE</color>
+
+    <!-- Teal accents -->
+    <color name="teal">#FF0F766E</color>
+    <color name="teal_light">#FF2DD4BF</color>
+    <color name="teal_surface">#FFDDF6F1</color>
+    <color name="teal_on_primary">#FFFFFFFF</color>
+
+    <!-- Text -->
+    <color name="ink_primary">#FF1F2A2A</color>
+    <color name="ink_secondary">#FF6B7368</color>
+    <color name="ink_muted">#FF9CA39A</color>
+
+    <!-- Status -->
+    <color name="amber_rating">#FFF59E0B</color>
+    <color name="error_red">#FFDC2626</color>
+    <color name="locked_grey">#FFB8BFB6</color>
+    <color name="player_background">#FF16211F</color>
+</resources>
